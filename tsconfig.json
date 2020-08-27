@@ -2,10 +2,11 @@
   "compilerOptions": {
     "strictNullChecks": true,
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "jsx": "react",
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "paths": {
-      "src/*": ["src/*"]
+      "~/*": ["./*"]
     }
   }
 }
