@@ -1,0 +1,33 @@
+{
+  "name": "sample-RippeyEats",
+  "version": "1.0.0",
+  "description": "Your task is to create the attached design within a WordPress theme environment. The theme should use a WordPress menu for the main navigation, a standard loop output for displaying the article under the navigation, and the WP search. All the necessary design files are inside this directory as well as any information you need to complete the exercise.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html --no-minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scottrippey/sample-SimplyEats.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scottrippey/sample-SimplyEats/issues"
+  },
+  "homepage": "https://github.com/scottrippey/sample-SimplyEats#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-typescript": "^1.0.0",
+    "tailwindcss": "^1.7.5",
+    "typescript": "^4.0.2"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "src": "^1.1.2"
+  }
+}
