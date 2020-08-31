@@ -6,6 +6,10 @@ module.exports = {
     fontFamily: {
       body: [ 'Raleway', 'sans-serif' ]
     },
+    // Use px instead of rem:
+    fontSize: generateSizes(range(10, 40, 2), 'px'),
+    lineHeight: generateSizes(range(2, 60, 2), 'px'),
+    spacing: generateSizes(range(-10, 80, 5), 'px'),
     colors: {
       'orange': '#CC4B00', // (Links)
       'yellow': '#FFC700', // (Navigation highlight)
@@ -27,4 +31,19 @@ module.exports = {
     'responsive', 'group-hover', 'group-focus', 'focus-within', 'first', 'last', 'odd', 'even', 'hover', 'focus', 'active', 'visited', 'disabled'
   ],
   plugins: [],
+}
+
+function generateSizes(values, unit = 'px') {
+  const results = {};
+  for (const value of values) {
+    results[value] = `${value}${unit}`;
+  }
+  return results;
+}
+function range(min, max, skip = 1) {
+  const results = [];
+  for (let i = min; i <= max; i += skip) {
+    results.push(i);
+  }
+  return results;
 }

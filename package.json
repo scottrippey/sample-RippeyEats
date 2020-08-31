@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel src/index.html",
-    "build": "rm -rf docs && NODE_ENV=production parcel build src/index.html --no-minify --out-dir docs"
+    "build": "rm -rf docs && NODE_ENV=production parcel build src/index.html --no-minify --out-dir docs",
+    "clean": "rm -rf docs .cache"
   },
   "repository": {
     "type": "git",
@@ -22,10 +23,12 @@
   "devDependencies": {
     "classnames": "^2.2.6",
     "parcel-bundler": "^1.12.4",
+    "postcss-nesting": "^7.0.1",
     "tailwindcss": "^1.7.5",
     "typescript": "^4.0.2"
   },
   "dependencies": {
+    "@types/react": "^16.9.48",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "src": "^1.1.2"

@@ -2,22 +2,22 @@ import React from 'react';
 import classNames from 'classnames';
 import { NAV_ITEMS } from "~/common/nav";
 
-
 export const Header: React.FC = () => {
-  const [selectedIndex, setSelectedIndex] = React.useState(0);
+  const [selectedIndex, setSelectedIndex] = React.useState(1);
 
-  return <section className="text-white text-lg">
-    <h1 className="bg-blue-light px-10 flex">
-      <span className="p-4 first:-ml-4 self-center flex-grow text-center">
+  return <header className="text-white text-16">
+    <h1 className="bg-blue-light px-40 leading-52 flex">
+      <span className="self-center flex-grow text-center lg:text-left">
         Eats.
       </span>
     </h1>
-    <h2 className="bg-blue px-10 flex">
+    <h2 className="bg-blue px-40 leading-52 flex">
       { NAV_ITEMS.map(({ id, label }, index) =>
         <a
           key={id}
           className={classNames(
-            "inline-block p-4 first:-ml-4 underline self-center",
+            "inline-block px-20 first:-ml-20",
+            "underline cursor-pointer",
             { "bg-blue-dark text-yellow": index === selectedIndex }
           )}
           onClick={() => setSelectedIndex(index)}
@@ -26,5 +26,5 @@ export const Header: React.FC = () => {
         </a>
       ) }
     </h2>
-  </section>
+  </header>
 };
