@@ -1,5 +1,7 @@
 module.exports = {
-  purge: [],
+  purge: [
+    './src/**/*'
+  ],
   theme: {
     fontFamily: {
       body: [ 'Raleway', 'sans-serif' ]
@@ -13,11 +15,16 @@ module.exports = {
       'gray': '#767676', // (Meta info and placeholder text)
       'gray-dark': '#333333', // (Content and in-form search icon)
       'white': '#FFFFFF', // (Header links / icons and search input)
+      'black': '#000000',
     },
-    extend: {
-
+    screens: {
+      "lg": { min: "640px" }
     },
+    extend: {},
   },
-  variants: {},
+  variants: [
+    // Enable all variants:
+    'responsive', 'group-hover', 'group-focus', 'focus-within', 'first', 'last', 'odd', 'even', 'hover', 'focus', 'active', 'visited', 'disabled'
+  ],
   plugins: [],
 }
