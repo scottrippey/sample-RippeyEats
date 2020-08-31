@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/scottrippey/sample-SimplyEats#readme",
   "devDependencies": {
+    "classnames": "^2.2.6",
     "parcel-bundler": "^1.12.4",
     "tailwindcss": "^1.7.5",
     "typescript": "^4.0.2"

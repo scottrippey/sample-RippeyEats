@@ -1,25 +1,30 @@
 import React from 'react';
+import classNames from 'classnames';
+import { NAV_ITEMS } from "~/common/nav";
+
 
 export const Header: React.FC = () => {
-  return <section>
-    <h1 className="bg-blue text-white text-4 h-10 p-2">
-      Eats
+  const [selectedIndex, setSelectedIndex] = React.useState(0);
+
+  return <section className="text-white text-lg">
+    <h1 className="bg-blue-light px-10 flex">
+      <span className="p-4 first:-ml-4 self-center flex-grow text-center">
+        Eats.
+      </span>
     </h1>
-    <h2 className="bg-blue-dark text-white text-4 p-2">
-      <ul>
-        <li>
-          Lunch & Dinner Menu
-        </li>
-        <li>
-          Blog
-        </li>
-        <li>
-          About Us
-        </li>
-        <li>
-          Contact
-        </li>
-      </ul>
+    <h2 className="bg-blue px-10 flex">
+      { NAV_ITEMS.map(({ id, label }, index) =>
+        <a
+          key={id}
+          className={classNames(
+            "inline-block p-4 first:-ml-4 underline self-center",
+            { "bg-blue-dark text-yellow": index === selectedIndex }
+          )}
+          onClick={() => setSelectedIndex(index)}
+        >
+          {label}
+        </a>
+      ) }
     </h2>
   </section>
 };
