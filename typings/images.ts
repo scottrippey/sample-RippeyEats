@@ -3,6 +3,6 @@ declare module "*.png" {
   export default value;
 }
 declare module "*.svg" {
-  const value: string;
-  export default value;
+  const Value: React.FC<React.SVGProps<unknown>>;
+  export default Value;
 }

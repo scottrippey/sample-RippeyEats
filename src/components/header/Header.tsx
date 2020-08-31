@@ -1,13 +1,15 @@
 import React from 'react';
 import classNames from 'classnames';
+import { LogoSvg } from "~/common/images";
 import { NAV_ITEMS } from "~/common/nav";
 
 export const Header: React.FC = () => {
   const [selectedIndex, setSelectedIndex] = React.useState(1);
 
   return <header className="text-white text-16">
-    <h1 className="bg-blue-light px-40 leading-52 flex">
-      <span className="self-center flex-grow text-center lg:text-left">
+    <h1 className="bg-blue-light px-40 leading-52 flex items-center">
+      <LogoSvg className="fill-current inline-block h-35 mr-15"  />
+      <span className="flex-grow text-center lg:text-left">
         Eats.
       </span>
     </h1>

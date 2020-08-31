@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/scottrippey/sample-SimplyEats#readme",
   "devDependencies": {
+    "@svgr/parcel-plugin-svgr": "^5.4.0",
     "classnames": "^2.2.6",
     "parcel-bundler": "^1.12.4",
     "postcss-nesting": "^7.0.1",
