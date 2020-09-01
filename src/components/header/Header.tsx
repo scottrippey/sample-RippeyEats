@@ -8,7 +8,7 @@ const PLACEHOLDER_TEXT = "e.g. delicious sandwiches";
 
 export const Header: React.FC = () => {
   const [selectedIndex, setSelectedIndex] = React.useState(1);
-  const [searchOpen, setSearchOpen] = React.useState(true);
+  const [searchOpen, setSearchOpen] = React.useState(false);
 
   return <header className="text-white text-16">
 
