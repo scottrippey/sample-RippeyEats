@@ -18,7 +18,7 @@ export const Home: React.FC = () => {
  * Just a wrapper that includes the content padding
  */
 const Content: React.FC = ({ children }) => {
-  return <section className="px-40 py-20">
+  return <section className="px-20 lg:px-40 py-20">
     {children}
   </section>
 }

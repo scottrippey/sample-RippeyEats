@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import { CloseSvg, LogoSvg, SearchSvg } from "~/common/images";
+import { CloseSvg, LogoSvg, MenuSvg, SearchSvg } from "~/common/images";
 import { NAV_ITEMS } from "~/common/nav";
 
 const EATS = "Eats.";
@@ -12,11 +12,14 @@ export const Header: React.FC = () => {
 
   return <header className="text-white text-16">
 
-    <h1 className="bg-blue-light px-40 leading-52 flex items-center">
-      <span className="mr-15">
+    <h1 className="bg-blue-light px-20 lg:px-40 justify-between leading-52 flex items-center">
+      <span className="lg:hidden">
+        <MenuSvg className="w-35" />
+      </span>
+      <span className="mr-15 text-center">
         <LogoSvg className="h-35"  />
       </span>
-      <span className="flex-grow">
+      <span className="hidden lg:block lg:flex-grow">
         {EATS}
       </span>
       <span className="relative -mr-20">
@@ -45,7 +48,7 @@ export const Header: React.FC = () => {
     </h1>
 
 
-    <h2 className="bg-blue px-40 leading-52 flex">
+    <h2 className="bg-blue px-20 lg:px-40 leading-52 flex">
       { NAV_ITEMS.map(({ id, label }, index) =>
         <a
           key={id}
