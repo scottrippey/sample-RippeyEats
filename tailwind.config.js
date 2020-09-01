@@ -9,7 +9,11 @@ module.exports = {
     // Use px instead of rem:
     fontSize: generateSizes(range(10, 40, 2), 'px'),
     lineHeight: generateSizes(range(2, 60, 2), 'px'),
-    spacing: generateSizes(range(-10, 80, 5), 'px'),
+    spacing: generateSizes(range(-10, 100, 5), 'px'),
+    inset: {
+      '0': 0,
+      '100': '100%',
+    },
     colors: {
       'orange': '#CC4B00', // (Links)
       'yellow': '#FFC700', // (Navigation highlight)
