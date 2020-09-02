@@ -1131,7 +1131,7 @@ function SvgSearch(props) {
 var _default = SvgSearch;
 exports.default = _default;
 },{"react":"n8MK"}],"Zudk":[function(require,module,exports) {
-module.exports = "/sandwich.cf401a4a.png";
+module.exports = "sandwich.cf401a4a.png";
 },{}],"i2p5":[function(require,module,exports) {
 "use strict";
 
@@ -1549,4 +1549,4 @@ var Home_1 = require("~/pages/Home");
 
 react_dom_1.default.render(react_1.default.createElement(Home_1.Home, null), document.getElementById('app-root'));
 },{"react":"n8MK","react-dom":"NKHc","~/pages/Home":"Y0Gi"}]},{},["zo2T"], null)
-//# sourceMappingURL=/src.6242f2b0.js.map
+//# sourceMappingURL=src.6242f2b0.js.map
