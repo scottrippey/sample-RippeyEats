@@ -2,7 +2,9 @@
 A sample website to showcase some basic web development knowledge.
 
 # Sample
-TODO
+![RippeyEats Sample](https://user-images.githubusercontent.com/430608/91997404-4a8c3000-ecf7-11ea-8068-d63ab8f34a84.gif)
+
+
 
 # Tech Stack
 - React
