@@ -1,6 +1,9 @@
 # What is this?
 A sample website to showcase some basic web development knowledge.
 
+# Sample
+TODO
+
 # Tech Stack
 - React
 - TypeScript
