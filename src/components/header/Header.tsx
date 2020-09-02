@@ -9,14 +9,16 @@ const PLACEHOLDER_TEXT = "e.g. delicious sandwiches";
 export const Header: React.FC = () => {
   const [selectedIndex, setSelectedIndex] = React.useState(1);
   const [searchOpen, setSearchOpen] = React.useState(false);
-  const [navOpen, setNavOpen] = React.useState(true /*todo false*/);
+  const [navOpen, setNavOpen] = React.useState(false);
 
   return <header className="text-white text-16">
 
-    <h1 className="bg-blue-light px-20 lg:px-40 justify-between leading-52 flex items-center">
+    {/* Main Header, with menu, logo, search */}
+    <nav className="bg-blue-light px-20 lg:px-40 justify-between leading-52 flex items-center">
+      {/* Hamburger menu, hidden on large */}
       <span
         className={classNames(
-          "lg:hidden -ml-20 p-20 inline-block",
+          "lg:hidden -ml-20 p-20 inline-block bg-blue-light transition-color",
           "cursor-pointer select-none",
           { "bg-blue": navOpen },
         )}
@@ -30,16 +32,22 @@ export const Header: React.FC = () => {
           : <CloseSvg className="w-20" />
         }
       </span>
+
+      {/* Literal Hamburger logo */}
       <span className="mr-15 text-center">
         <LogoSvg className="h-35"  />
       </span>
+
+      {/* "Eats." title */}
       <span className="hidden lg:block lg:flex-grow">
         {EATS}
       </span>
+
+      {/* Search icon */}
       <span className="relative -mr-20">
         <span
           className={classNames(
-            "cursor-pointer select-none block p-20",
+            "cursor-pointer select-none block p-20 bg-blue-light transition-color",
             { "bg-blue": searchOpen }
           )}
           onClick={(ev) => {
@@ -59,13 +67,13 @@ export const Header: React.FC = () => {
           </span>
         }
       </span>
-    </h1>
+    </nav>
 
-
-    <h2 className={classNames(
-      "bg-blue lg:px-40 leading-52 flex flex-col lg:flex-row lg:flex",
-      { "hidden": !navOpen }
-    )}>
+    {/* Secondary nav (mobile: only shows when menu clicked) */}
+    <nav
+      className="bg-blue lg:px-40 leading-52 flex flex-col lg:flex-row h-0 lg:h-auto overflow-hidden transition-height"
+      style={{ height: !navOpen ? "" : `${NAV_ITEMS.length * 52}px` }}
+    >
       { NAV_ITEMS.map(({ id, label }, index) =>
         <a
           key={id}
@@ -79,7 +87,7 @@ export const Header: React.FC = () => {
           {label}
         </a>
       ) }
-    </h2>
+    </nav>
   </header>
 };
 

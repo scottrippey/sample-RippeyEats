@@ -28,7 +28,11 @@ module.exports = {
     screens: {
       "lg": { min: "640px" }
     },
-    extend: {},
+    extend: {
+      transitionProperty: {
+        'height': 'height',
+      }
+    },
   },
   variants: [
     // Enable all variants:
