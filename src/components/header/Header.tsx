@@ -61,13 +61,16 @@ export const Header: React.FC = () => {
               : <CloseSvg className="w-20" />
           }
         </span>
-        { !searchOpen ? null :
-          <span className="absolute top-100 right-0">
-            <SearchBox />
-          </span>
-        }
       </span>
     </nav>
+
+    {/* Search Box */}
+    <span
+      className="block lg:absolute lg:right-0 lg:mr-20 h-0 lg:h-auto overflow-hidden"
+      style={{ height: !searchOpen ? '0' : `${52 + 40}px`, minWidth: '400px' }}
+    >
+      <SearchBox />
+    </span>
 
     {/* Secondary nav (mobile: only shows when menu clicked) */}
     <nav
@@ -98,10 +101,9 @@ const SearchBox: React.FC = () => {
       type="text"
       inputMode="search"
       placeholder={PLACEHOLDER_TEXT}
-      className="placeholder-gray pl-20 pr-52"
-      style={{ width: '350px' }}
+      className="placeholder-gray pl-20 pr-52 w-full"
     />
-    <span className="cursor-pointer absolute p-15" style={{ right: 20 }}>
+    <span className="cursor-pointer p-15 -ml-50 translate-x-50 ">
       <SearchSvg className="w-20" />
     </span>
   </div>;
