@@ -1369,7 +1369,41 @@ exports.NAV_ITEMS = [{
   id: "contact",
   label: "Contact"
 }];
-},{}],"a48i":[function(require,module,exports) {
+},{}],"iTVS":[function(require,module,exports) {
+"use strict";
+
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.useToggle = void 0;
+
+var react_1 = __importDefault(require("react"));
+/**
+ * Returns a simple toggle value & function for toggling a value
+ */
+
+
+exports.useToggle = function (initial) {
+  var _a = react_1.default.useState(initial),
+      toggled = _a[0],
+      setToggled = _a[1];
+
+  var toggleValue = react_1.default.useCallback(function (forceToggle) {
+    setToggled(function (val) {
+      return forceToggle !== null && forceToggle !== void 0 ? forceToggle : !val;
+    });
+  }, [
+    /* No dependencies (since setToggled is constant) */
+  ]);
+  return [toggled, toggleValue];
+};
+},{"react":"n8MK"}],"a48i":[function(require,module,exports) {
 "use strict";
 
 var __importDefault = this && this.__importDefault || function (mod) {
@@ -1391,6 +1425,8 @@ var images_1 = require("~/common/images");
 
 var nav_1 = require("~/common/nav");
 
+var useToggle_1 = require("~/hooks/useToggle");
+
 var EATS = "Eats.";
 var PLACEHOLDER_TEXT = "e.g. delicious sandwiches";
 
@@ -1399,13 +1435,13 @@ exports.Header = function () {
       selectedIndex = _a[0],
       setSelectedIndex = _a[1];
 
-  var _b = react_1.default.useState(false),
+  var _b = useToggle_1.useToggle(false),
       searchOpen = _b[0],
-      setSearchOpen = _b[1];
+      toggleSearch = _b[1];
 
-  var _c = react_1.default.useState(false),
+  var _c = useToggle_1.useToggle(false),
       navOpen = _c[0],
-      setNavOpen = _c[1];
+      toggleNav = _c[1];
 
   return react_1.default.createElement("header", {
     className: "text-white text-16"
@@ -1417,9 +1453,7 @@ exports.Header = function () {
     }),
     onClick: function onClick(ev) {
       ev.preventDefault();
-      setNavOpen(function (open) {
-        return !open;
-      });
+      toggleNav();
     }
   }, !navOpen ? react_1.default.createElement(images_1.MenuSvg, {
     className: "w-20"
@@ -1439,9 +1473,7 @@ exports.Header = function () {
     }),
     onClick: function onClick(ev) {
       ev.preventDefault();
-      setSearchOpen(function (current) {
-        return !current;
-      });
+      toggleSearch();
     }
   }, !searchOpen ? react_1.default.createElement(images_1.SearchSvg, {
     className: "w-20"
@@ -1487,7 +1519,7 @@ var SearchBox = function SearchBox() {
     className: "w-20"
   })));
 };
-},{"react":"n8MK","classnames":"qb7c","~/common/images":"uU4o","~/common/nav":"HNJ9"}],"Y0Gi":[function(require,module,exports) {
+},{"react":"n8MK","classnames":"qb7c","~/common/images":"uU4o","~/common/nav":"HNJ9","~/hooks/useToggle":"iTVS"}],"Y0Gi":[function(require,module,exports) {
 "use strict";
 
 var __importDefault = this && this.__importDefault || function (mod) {
@@ -1549,4 +1581,4 @@ var Home_1 = require("~/pages/Home");
 
 react_dom_1.default.render(react_1.default.createElement(Home_1.Home, null), document.getElementById('app-root'));
 },{"react":"n8MK","react-dom":"NKHc","~/pages/Home":"Y0Gi"}]},{},["zo2T"], null)
-//# sourceMappingURL=src.6242f2b0.js.map
+//# sourceMappingURL=src.74cb0e40.js.map

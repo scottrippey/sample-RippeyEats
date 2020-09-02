@@ -2,14 +2,15 @@ import React from 'react';
 import classNames from 'classnames';
 import { CloseSvg, LogoSvg, MenuSvg, SearchSvg } from "~/common/images";
 import { NAV_ITEMS } from "~/common/nav";
+import { useToggle } from "~/hooks/useToggle";
 
 const EATS = "Eats.";
 const PLACEHOLDER_TEXT = "e.g. delicious sandwiches";
 
 export const Header: React.FC = () => {
   const [selectedIndex, setSelectedIndex] = React.useState(1);
-  const [searchOpen, setSearchOpen] = React.useState(false);
-  const [navOpen, setNavOpen] = React.useState(false);
+  const [searchOpen, toggleSearch] = useToggle(false);
+  const [navOpen, toggleNav] = useToggle(false);
 
   return <header className="text-white text-16">
 
@@ -24,7 +25,7 @@ export const Header: React.FC = () => {
         )}
         onClick={(ev) => {
           ev.preventDefault();
-          setNavOpen(open => !open);
+          toggleNav();
         }}
       >
         { !navOpen
@@ -52,7 +53,7 @@ export const Header: React.FC = () => {
           )}
           onClick={(ev) => {
             ev.preventDefault();
-            setSearchOpen(current => !current);
+            toggleSearch();
           }}
         >
           {
