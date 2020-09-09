@@ -99,6 +99,7 @@ export const Header: React.FC = () => {
 const SearchBox: React.FC = () => {
   return <div className="bg-blue p-20 flex items-center leading-52 text-black">
     <input
+      aria-label="Search"
       type="text"
       inputMode="search"
       placeholder={PLACEHOLDER_TEXT}
