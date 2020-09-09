@@ -1130,8 +1130,8 @@ function SvgSearch(props) {
 
 var _default = SvgSearch;
 exports.default = _default;
-},{"react":"n8MK"}],"Zudk":[function(require,module,exports) {
-module.exports = "sandwich.cf401a4a.png";
+},{"react":"n8MK"}],"ukCu":[function(require,module,exports) {
+module.exports = "sandwich.fa90f189.jpg";
 },{}],"i2p5":[function(require,module,exports) {
 "use strict";
 
@@ -1192,7 +1192,7 @@ var __importDefault = this && this.__importDefault || function (mod) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.LogoSvg = exports.sandwichPng = exports.SearchSvg = exports.MenuSvg = exports.CloseSvg = void 0;
+exports.LogoSvg = exports.sandwichJpg = exports.SearchSvg = exports.MenuSvg = exports.CloseSvg = void 0;
 
 var close_svg_1 = require("../../Design/Icons/close.svg");
 
@@ -1221,12 +1221,12 @@ Object.defineProperty(exports, "SearchSvg", {
   }
 });
 
-var sandwich_png_1 = require("../../Design/Images/sandwich.png");
+var sandwich_jpg_1 = require("../../Design/Images/sandwich.jpg");
 
-Object.defineProperty(exports, "sandwichPng", {
+Object.defineProperty(exports, "sandwichJpg", {
   enumerable: true,
   get: function get() {
-    return __importDefault(sandwich_png_1).default;
+    return __importDefault(sandwich_jpg_1).default;
   }
 });
 
@@ -1238,7 +1238,7 @@ Object.defineProperty(exports, "LogoSvg", {
     return __importDefault(logo_svg_1).default;
   }
 });
-},{"../../Design/Icons/close.svg":"jwe8","../../Design/Icons/menu.svg":"uhNW","../../Design/Icons/search.svg":"BD3v","../../Design/Images/sandwich.png":"Zudk","../../Design/Images/logo.svg":"i2p5"}],"DLQe":[function(require,module,exports) {
+},{"../../Design/Icons/close.svg":"jwe8","../../Design/Icons/menu.svg":"uhNW","../../Design/Icons/search.svg":"BD3v","../../Design/Images/sandwich.jpg":"ukCu","../../Design/Images/logo.svg":"i2p5"}],"DLQe":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1253,7 +1253,7 @@ exports.BLOG_ENTRIES = [{
   blurb: "Lunch, the abbreviation for luncheon, is a meal typically eaten at midday. During the 20th century, the meaning gradually narrowed to a small, or mid-sized meal eaten at midday.",
   content: "Lunch, the abbreviation for luncheon, is a meal typically eaten at midday. During the 20th century, the meaning gradually narrowed to a small, or mid-sized meal eaten at midday.",
   published: "January 1, 2018",
-  imageUrl: images_1.sandwichPng
+  imageUrl: images_1.sandwichJpg
 }];
 },{"~/common/images":"uU4o"}],"ialm":[function(require,module,exports) {
 "use strict";
@@ -1270,11 +1270,6 @@ Object.defineProperty(exports, "__esModule", {
 exports.BlogEntry = void 0;
 
 var react_1 = __importDefault(require("react"));
-
-var classes = {
-  title: "text-orange underline text-34 "
-};
-var titleClass = "text-orange";
 
 exports.BlogEntry = function (_a) {
   var data = _a.data;
@@ -1509,6 +1504,7 @@ var SearchBox = function SearchBox() {
   return react_1.default.createElement("div", {
     className: "bg-blue p-20 flex items-center leading-52 text-black"
   }, react_1.default.createElement("input", {
+    "aria-label": "Search",
     type: "text",
     inputMode: "search",
     placeholder: PLACEHOLDER_TEXT,
@@ -1581,4 +1577,4 @@ var Home_1 = require("~/pages/Home");
 
 react_dom_1.default.render(react_1.default.createElement(Home_1.Home, null), document.getElementById('app-root'));
 },{"react":"n8MK","react-dom":"NKHc","~/pages/Home":"Y0Gi"}]},{},["zo2T"], null)
-//# sourceMappingURL=src.74cb0e40.js.map
+//# sourceMappingURL=src.0ac52b57.js.map
